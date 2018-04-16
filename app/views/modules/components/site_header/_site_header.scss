@@ -1,0 +1,30 @@
+
+.site_header{
+  background-color: $grey1;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.site_header_wrapper{
+  width: 1000px;
+  margin: 0 auto;
+  @include clearfix();
+}
+.site_logo{
+  @include border-radius(50%);
+  width: 40px;
+  height: 40px;
+  background-color: $grey2;
+  float:left;
+}
+.site_name{
+  float: left;
+  width: calc(100% - 40px - 50%);
+  height: 30px;
+  background-color: $grey2;
+  margin: 5px 0 0 20px;
+}
+.site_menu_wrapper{
+  width: 50%;
+  float: right;
+}

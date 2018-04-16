@@ -23,22 +23,13 @@ fileinclude = require('gulp-file-include');
 gulp.task('browserSync', function() {
     browserSync({
         server: {
-            baseDir: "app/"
+            baseDir: "dist/"
         },
         options: {
             reloadDelay: 250
         },
         notify: false
     });
-});
-
-gulp.task('fileinclude', function() {
-  gulp.src(['app/index.html'])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
-    .pipe(gulp.dest('./'));
 });
 
 //compressing images & handle SVG files
@@ -69,7 +60,7 @@ gulp.task('scripts', function() {
                 //catch errors
                 .on('error', gutil.log)
                 //where we will store our finalized, compressed script
-                .pipe(gulp.dest('app/scripts'))
+                .pipe(gulp.dest('dist/scripts'))
                 //notify browserSync to refresh
                 .pipe(browserSync.reload({stream: true}));
 });
@@ -91,7 +82,7 @@ gulp.task('scripts-deploy', function() {
 //compiling our SCSS files
 gulp.task('styles', function() {
     //the initializer / master SCSS file, which will just be a file that imports everything
-    return gulp.src('app/styles/scss/init.scss')
+    return gulp.src('app/views/**/*.scss')
                 //prevent pipe breaking caused by errors from gulp plugins
                 .pipe(plumber({
                   errorHandler: function (err) {
@@ -105,7 +96,7 @@ gulp.task('styles', function() {
                 .pipe(sass({
                       errLogToConsole: true,
                       includePaths: [
-                          'app/styles/scss/'
+                          'app/views/**/*.scss'
                       ]
                 }))
                 .pipe(autoprefixer({
@@ -115,11 +106,11 @@ gulp.task('styles', function() {
                 //catch errors
                 .on('error', gutil.log)
                 //the final filename of our combined css file
-                .pipe(concat('styles.css'))
+                //.pipe(concat('styles.css'))
                 //get our sources via sourceMaps
                 .pipe(sourceMaps.write())
                 //where to save our final, compressed css file
-                .pipe(gulp.dest('app/styles'))
+                .pipe(gulp.dest('dist/styles'))
                 //notify browserSync to refresh
                 .pipe(browserSync.reload({stream: true}));
 });
@@ -127,12 +118,12 @@ gulp.task('styles', function() {
 //compiling our SCSS files for deployment
 gulp.task('styles-deploy', function() {
     //the initializer / master SCSS file, which will just be a file that imports everything
-    return gulp.src('app/styles/scss/init.scss')
+    return gulp.src('app/views/**/*.scss')
                 .pipe(plumber())
                 //include SCSS includes folder
                 .pipe(sass({
                       includePaths: [
-                          'app/styles/scss',
+                          'app/views/**/*.scss',
                       ]
                 }))
                 .pipe(autoprefixer({
@@ -140,19 +131,32 @@ gulp.task('styles-deploy', function() {
                   cascade:  true
                 }))
                 //the final filename of our combined css file
-                .pipe(concat('styles.css'))
+                //.pipe(concat('styles.css'))
                 .pipe(minifyCSS())
                 //where to save our final, compressed css file
                 .pipe(gulp.dest('dist/styles'));
 });
 
 //basically just keeping an eye on all HTML files
+
+gulp.task('assemble_html', function() {
+  return gulp.src('app/views/**/*.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@root'
+    }))
+    .pipe(plumber())
+    .pipe(gulp.dest('dist/'))
+    .pipe(browserSync.reload({stream: true}))
+    .on('error', gutil.log);
+});
+
 gulp.task('html', function() {
     //watch any and all HTML files and refresh when something changes
-    return gulp.src('app/*.html')
+    return gulp.src('app/views/*.html')
         .pipe(plumber())
+        .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({stream: true}))
-        //catch errors
         .on('error', gutil.log);
 });
 
@@ -207,13 +211,13 @@ gulp.task('scaffold', function() {
 //  startup the web server,
 //  start up browserSync
 //  compress all scripts and SCSS files
-gulp.task('default', ['browserSync', 'scripts', 'styles', 'fileinclude'], function() {
+gulp.task('default', ['assemble_html', 'browserSync', 'scripts', 'styles'], function() {
     //a list of watchers, so it will watch all of the following files waiting for changes
     gulp.watch('app/scripts/src/**', ['scripts']);
-    gulp.watch('app/styles/scss/**', ['styles']);
+    gulp.watch('app/views/**/*.scss', ['styles']);
     gulp.watch('app/images/**', ['images']);
-    gulp.watch('app/**/*.html', ['html', 'fileinclude']);
+    gulp.watch('app/views/**/*.html', ['assemble_html']);
 });
 
 //this is our deployment task, it will set everything for deployment-ready files
-gulp.task('deploy', gulpSequence('clean', 'scaffold', ['scripts-deploy', 'styles-deploy', 'images-deploy'], 'html-deploy'));
+gulp.task('deploy', gulpSequence('clean', 'scaffold', ['scripts-deploy', 'styles-deploy', 'images-deploy'], 'assemble_html', 'html-deploy'));
