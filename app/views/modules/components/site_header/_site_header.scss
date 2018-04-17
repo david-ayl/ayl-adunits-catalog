@@ -17,9 +17,12 @@
   background-color: $grey2;
   float:left;
 }
+.site_title{
+  width: 50%;
+}
 .site_name{
   float: left;
-  width: calc(100% - 40px - 50%);
+  width: 70%;
   height: 30px;
   background-color: $grey2;
   margin: 5px 0 0 20px;
@@ -27,4 +30,13 @@
 .site_menu_wrapper{
   width: 50%;
   float: right;
+  @include clearfix();
+}
+.site_menu{
+  list-style: none;
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  background-color: $grey2;
+  margin: 10px 5px 0 5px;
 }
