@@ -1,0 +1,18 @@
+
+<div class="site_content">
+
+  <div class="site_content_wrapper">
+
+    <div class="site_left">
+        @@include('app/views/modules/components/site_big_picture/site_big_picture.html')
+    </div>
+
+    <div class="site_sidebar">
+      @@for (var i = 0; i < 4; i++) {
+        @@include('app/views/modules/components/site_mpu/site_mpu.html')
+      }
+    </div>
+
+  </div>
+
+</div>

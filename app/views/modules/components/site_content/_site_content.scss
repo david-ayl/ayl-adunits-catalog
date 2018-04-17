@@ -1,0 +1,25 @@
+
+.site_content{
+  margin: 20px 0;
+  width: 100%;
+}
+
+.site_content_wrapper{
+  @include clearfix();
+  width: 1000px;
+  margin: 0px auto;
+  background-color: $grey1;
+  padding: 40px 0px;
+}
+
+.site_left{
+  float: left;
+  width: calc(100% - 320px);
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.site_sidebar{
+  float: left;
+  width: 320px;
+}
