@@ -11,7 +11,9 @@
 @import 'modules/components/site_article/_site_article';
 @import 'modules/components/site_footer/_site_footer';
 
-
+.site_sizer{
+  overflow: hidden;
+}
 #webpage_wrapper{
   width: 200%;
   transition-duration: 0.3s;
@@ -33,7 +35,7 @@
 }
 .article_wrapper{
   width: 1000px;
-  margin: 20px auto;
+  margin: 60px auto 40px auto;
   &:after{
     content: "";
     display: block;
