@@ -9,17 +9,33 @@
 
     <link rel="stylesheet" type="text/css" href="styles/iframe.css">
   </head>
-  <body>
-
+  <body class="scrollbar hp_view">
 
     <div id="webpage_wrapper">
 
       <div id="hp_page">
         @@include('app/views/modules/components/site_header/header.html')
         @@include('app/views/modules/components/site_content/site_content.html')
+        @@include('app/views/modules/components/site_footer/site_footer.html')
       </div>
       <div id="article_page">
-
+        @@include('app/views/modules/components/site_header/header.html')
+        <div class="article_wrapper">
+          <div class="article_txt_wrapper">
+            @@include('app/views/modules/components/site_big_picture/site_big_picture.html')
+            <div class="article_lines_wrapper">
+              @@for (var i = 0; i < 45; i ++) {
+                @@include('app/views/modules/components/site_article/site_article.html')
+              }
+            </div>
+          </div>
+          <div class="article_sidebar">
+            @@for (var i = 0; i < 4; i++) {
+              @@include('app/views/modules/components/site_mpu/site_mpu.html')
+            }
+          </div>
+        </div>
+        @@include('app/views/modules/components/site_footer/site_footer.html')
       </div>
 
     </div>

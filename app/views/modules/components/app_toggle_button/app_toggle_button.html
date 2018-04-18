@@ -1,0 +1,12 @@
+<div class="switcher_wrapper">
+  <div class="toggle_wrapper">
+    <div class="toggle_container">
+      <div class="row press" data-toggler="false">
+        <div class="toggler left_value toggle_value">@@left_value</div>
+        <input type="checkbox" onclick="this.parentNode.getAttribute('data-toggler') === 'false' ? this.parentNode.setAttribute('data-toggler', 'true') : this.parentNode.setAttribute('data-toggler', 'false')" id=@@inputID class="toggler toggle_hide">
+        <label for=@@inputID class="toggler toggle_label"></label>
+        <div class="toggler right_value toggle_value">@@right_value</div>
+      </div>
+    </div>
+  </div>
+</div>

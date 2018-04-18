@@ -1,0 +1,87 @@
+
+.switcher_wrapper{
+  display:inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.toggle_wrapper{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+  padding: 5px 15px;
+}
+.toggle_value{
+  text-transform: uppercase;
+  font-weight: 900;
+  transition-duration: 0.3s;
+  font-size: 12px;
+  display: inline-block;
+  line-height:21px;
+  vertical-align: top;
+  color: $grey1;
+  &:first-of-type{
+    margin: 0 10px 0 0;
+  }
+  &:last-of-type{
+    margin: 0 0 0 10px;
+  }
+}
+.toggle_hide{
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 21px;
+  top: 0;
+  left: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.toggle_label{
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  height: 17px;
+  width: 35px;
+  background: $grey1;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $grey2;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  &:after{
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 100px;
+    background: $grey2;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 0.3s ease;
+  }
+}
+label{
+  font-weight: 100;
+}
+.toggle_hide:checked ~ label{
+  font-weight: 400;
+}
+.toggle_hide:checked ~ label:after {
+    left: 20px;
+}
+[data-toggler="false"] {
+  .left_value{
+    color: $grey3;
+  }
+}
+[data-toggler="true"] {
+  .right_value{
+    color: $grey3;
+  }
+}

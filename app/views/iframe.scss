@@ -7,3 +7,55 @@
 @import 'modules/components/site_content/_site_content';
 @import 'modules/components/site_big_picture/_site_big_picture';
 @import 'modules/components/site_mpu/_site_mpu';
+@import 'modules/components/site_full_width_feed/_site_full_width_feed';
+@import 'modules/components/site_article/_site_article';
+@import 'modules/components/site_footer/_site_footer';
+
+
+#webpage_wrapper{
+  width: 200%;
+  transition-duration: 0.3s;
+  &:after{
+    content:"";
+    display:block;
+    clear:both;
+  }
+}
+
+#hp_page{
+  width: 50%;
+  float:left;
+}
+
+#article_page{
+  width: 50%;
+  float:left;
+}
+.article_wrapper{
+  width: 1000px;
+  margin: 20px auto;
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.article_txt_wrapper{
+  box-sizing: border-box;
+  width: 1000px;
+  margin: 0px auto;
+  background-color: $grey1;
+  padding: 20px;
+  float: left;
+  width: calc(100% - 320px);
+}
+.article_lines_wrapper{
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.article_sidebar{
+  float: right;
+  width: 320px;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+}

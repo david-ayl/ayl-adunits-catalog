@@ -2,6 +2,9 @@
 .site_mpu_wrapper{
   width: 300px;
   height: 250px;
+  background-color: $grey1;
+  margin: 0 0 20px 0;
+  position:relative;
 }
 
 .site_mpu_image{
@@ -11,15 +14,24 @@
 }
 
 .site_mpu_title{
-  margin: 10px 0 0 0;
+  margin: 10px 0 0 10px;
+  height: 15px;
+  width: 85%;
+  background-color: $grey2;
+}
+
+.site_mpu_description{
+  margin: 10px 0 0 10px;
   height: 15px;
   width: 70%;
   background-color: $grey2;
 }
 
-.site_mpu_description{
-  margin: 10px 0 0 0;
-  height: 15px;
-  width: 95%;
+.site_mpu_sps{
+  position: absolute;
+  bottom:10px;
+  right: 10px;
+  height: 7px;
+  width: 40px;
   background-color: $grey2;
 }

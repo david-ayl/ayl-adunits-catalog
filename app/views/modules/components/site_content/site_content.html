@@ -5,6 +5,9 @@
 
     <div class="site_left">
         @@include('app/views/modules/components/site_big_picture/site_big_picture.html')
+        @@for (var i = 0; i < 4; i++) {
+          @@include('app/views/modules/components/site_full_width_feed/site_full_width_feed.html')
+        }
     </div>
 
     <div class="site_sidebar">
