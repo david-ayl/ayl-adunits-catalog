@@ -19,6 +19,13 @@
           "right_value" : "article"
         })
       </div>
+      <div id="site_iframe_sizer">
+        @@loop('app/views/modules/components/app_radio_button/app_radio_button.html', [
+          {"radio_name" : "device", "label" : "desktop", "ischecked" : "checked"},
+          {"radio_name" : "device", "label" : "tablet", "ischecked" : ""},
+          {"radio_name" : "device", "label" : "mobile", "ischecked" : ""}
+        ])
+      </div>
     </div>
 
     @@include('app/views/modules/components/app_iframe/app_iframe.html')
