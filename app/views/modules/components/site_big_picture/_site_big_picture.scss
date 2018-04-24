@@ -28,12 +28,12 @@
 }
 .big_picture_title{
   margin: 10px 0 0 0;
-  width: 280px;
+  width: 70%;
   height: 15px;
 }
 .big_picture_description{
   margin: 10px 0 0 0;
-  width: 220px;
+  width: 80px;
   height: 15px;
 }
 .big_picture_sps{
@@ -42,4 +42,13 @@
   right: 20px;
   width: 40px;
   height: 7px;
+}
+
+.tablet{
+
+}
+.mobile{
+  .big_picture{
+    height:260px;
+  }
 }

@@ -1,6 +1,7 @@
 
+function resize_iframe() {
 
-$(document).on("click", "#page_switcher", function() {
+  scrollToAnchor('#webpage_wrapper');
 
   function getCurrentHeight() {
 
@@ -15,9 +16,8 @@ $(document).on("click", "#page_switcher", function() {
     return currentHeight;
 
   }
-
-  $("#iframe").contents().find("body").toggleClass("article_view").toggleClass("hp_view");
+  console.log(getCurrentHeight());
   $("#iframe").contents().find(".site_sizer").height("auto");
   $("#iframe").contents().find(".site_sizer").height(getCurrentHeight() + "px");
 
-})
+}

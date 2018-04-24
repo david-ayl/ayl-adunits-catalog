@@ -3,11 +3,15 @@
   background-color: $grey1;
   width: 100%;
   padding: 20px 0;
+  & *{
+    transition-duration: 0.3s;
+  }
 }
 
 .site_header_wrapper{
   width: 1000px;
   margin: 0 auto;
+  box-sizing: border-box;
   @include clearfix();
 }
 .site_logo{
@@ -39,4 +43,26 @@
   height: 20px;
   background-color: $grey2;
   margin: 10px 5px 0 5px;
+}
+.tablet, .mobile{
+  .site_header_wrapper{
+    width: 100%;
+    padding: 0 20px;
+  }
+  .site_name{
+    width: 0px;
+  }
+  .site_menu_wrapper{
+    width: 40px;
+  }
+  .site_menu{
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin: 4px 0px;
+    &:first-of-type, &:last-of-type {
+      width: 0;
+      margin: 0px;
+    }
+  }
 }
