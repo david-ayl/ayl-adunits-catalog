@@ -3,14 +3,16 @@
 @import 'global_styles/_mixins';
 @import 'global_styles/_reset';
 
-@import 'modules/components/app_page/_app_page';
-@import 'modules/components/app_iframe/_app_iframe';
-@import 'modules/components/app_toggle_button/_app_toggle_button';
-@import 'modules/components/app_radio_button/_app_radio_button';
-
 
 body{
   font-family: "Muli";
   font-weight: 300;
   color: #010101;
+}
+#iframe{
+  display: block;
+  width: 80%;
+  height: 80vh;
+  margin: 20px auto 0 auto;
+  border: none;
 }

@@ -13,30 +13,43 @@
 
     <div id="webpage_wrapper">
 
-      <div class="site_sizer" id="hp_page">
-        @@include('app/views/modules/components/site_header/header.html')
-        @@include('app/views/modules/components/site_content/site_content.html')
-        @@include('app/views/modules/components/site_footer/site_footer.html')
-      </div>
-      <div class="site_sizer" id="article_page">
-        @@include('app/views/modules/components/site_header/header.html')
-        <div class="article_wrapper">
-          <div class="article_txt_wrapper">
-            @@include('app/views/modules/components/site_big_picture/site_big_picture.html')
-            <div class="article_lines_wrapper">
-              @@for (var i = 0; i < 45; i ++) {
-                @@include('app/views/modules/components/site_article/site_article.html')
-              }
-            </div>
-          </div>
-          <div class="article_sidebar">
-            @@for (var i = 0; i < 4; i++) {
-              @@include('app/views/modules/components/site_mpu/site_mpu.html')
-            }
-          </div>
+      <div class="row">
+
+        <div class="">
+          <h1 class="center_txt">Theory</h1>
         </div>
-        @@include('app/views/modules/components/site_footer/site_footer.html')
+
+        <div class="flex_container flex_just_centered">
+          <span class="menu_entry">Lorem</span>
+          <span class="menu_entry">Ipsum</span>
+          <span class="menu_entry">Dolor</span>
+          <span class="menu_entry">Sit</span>
+          <span class="menu_entry">Amet</span>
+          <span class="menu_entry">Consectetur</span>
+          <span class="menu_entry">Adipisicing</span>
+        </div>
+
+
       </div>
+
+      <div class="row">
+        <div class="main_content columns">
+          <div class="tiles_container">
+            @@loop("app/views/modules/components/site_feed_tile/site_feed_tile.html", [
+            { "size": "2", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet" },
+            { "size": "2", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet" },
+            { "size": "3", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet" },
+            { "size": "3", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet" },
+            { "size": "3", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet" }
+            ])
+          </div>
+
+        </div>
+        <div class="iab_sidebar columns">
+
+        </div>
+      </div>
+
 
     </div>
 

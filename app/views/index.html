@@ -11,24 +11,10 @@
   </head>
   <body>
 
-    <div id="settings">
-      <div id="site_page_switcher">
-        @@include('app/views/modules/components/app_toggle_button/app_toggle_button.html', {
-          "inputID" : "page_switcher",
-          "left_value" : "home page",
-          "right_value" : "article"
-        })
-      </div>
-      <div id="site_iframe_sizer">
-        @@loop('app/views/modules/components/app_radio_button/app_radio_button.html', [
-          {"radio_name" : "device", "label" : "desktop", "ischecked" : "checked"},
-          {"radio_name" : "device", "label" : "tablet", "ischecked" : ""},
-          {"radio_name" : "device", "label" : "mobile", "ischecked" : ""}
-        ])
-      </div>
-    </div>
 
-    @@include('app/views/modules/components/app_iframe/app_iframe.html')
+
+
+    <iframe id="iframe" src="./iframe.html"></iframe>
 
     <script src="scripts/app.js"></script>
 
