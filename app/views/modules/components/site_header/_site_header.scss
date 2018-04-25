@@ -1,0 +1,20 @@
+
+h1{
+  font-size: 40px;
+}
+#menu{
+  margin: 10px 0 20px 0;
+  height: 15px;
+}
+.menu_entry{
+  line-height: 15px;
+  padding: 0 30px;
+  color: $grey2;
+  border-right: 1px solid $grey2;
+  &:last-of-type{
+    border-right: none;
+  }
+  &:hover{
+    color: $grey2;
+  }
+}

@@ -1,0 +1,34 @@
+
+.full_width_tile_wrapper{
+  padding: 10px 0;
+  border-bottom: 1px solid $grey1;
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.full_width_image{
+  float: left;
+  width: 300px;
+}
+.full_width_txt_container{
+  padding: 10px 20px;
+  box-sizing: border-box;
+  float: left;
+  width: calc(100% - 300px);
+}
+.full_width_tag{
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.full_width_title{
+  font-size: 17px;
+  line-height: 18px;
+  margin: 10px 0 10px 0;
+}
+.full_width_description{
+  font-size: 14px;
+  line-height: 15px;
+}

@@ -4,12 +4,60 @@
 @import 'global_styles/_reset';
 @import 'global_styles/_layout';
 @import 'modules/components/site_feed_tile/_site_feed_tile';
+@import 'modules/components/site_iab_unit/_site_iab_unit';
+@import 'modules/components/site_feed_square_unit/_site_feed_square_unit';
+@import 'modules/components/site_most_read_unit/_site_most_read_unit';
+@import 'modules/components/site_full_width_tile/_site_full_width_tile.scss';
+@import 'modules/components/site_header/_site_header.scss';
+@import 'modules/components/site_footer/_site_footer.scss';
 
 
-.menu_entry{
-  padding: 0 10px;
-  color: $grey2;
-  &:hover{
-    color: $grey2;
+#webpage_wrapper{
+  padding: 0 20px;
+}
+
+.tiles_container{
+  &:after{
+    content: "";
+    display: block;
+    clear: both;
   }
+}
+.square_units_container{
+  &:after{
+    content:"";
+    display: block;
+    clear: both;
+  }
+}
+.area_title{
+  border-top: 1px solid $grey1;
+  position: relative;
+  margin: 50px 0 30px 0;
+  span{
+    background-color: #ffffff;
+    position: absolute;
+    top: -10px;
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+.iab_wrapper{
+  &:after{
+    content:"";
+    display: block;
+    clear: both;
+  }
+}
+.most_read_container{
+  margin: 20px 0;
+}
+.square_units_container{
+  margin: 20px 0 0 0;
+}
+
+.iab_sidebar{
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
 }

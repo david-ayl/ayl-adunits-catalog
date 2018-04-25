@@ -14,43 +14,77 @@
     <div id="webpage_wrapper">
 
       <div class="row">
-
-        <div class="">
-          <h1 class="center_txt">Theory</h1>
-        </div>
-
-        <div class="flex_container flex_just_centered">
-          <span class="menu_entry">Lorem</span>
-          <span class="menu_entry">Ipsum</span>
-          <span class="menu_entry">Dolor</span>
-          <span class="menu_entry">Sit</span>
-          <span class="menu_entry">Amet</span>
-          <span class="menu_entry">Consectetur</span>
-          <span class="menu_entry">Adipisicing</span>
-        </div>
-
-
+        @@include("app/views/modules/components/site_header/site_header.html")
       </div>
 
       <div class="row">
         <div class="main_content columns">
           <div class="tiles_container">
             @@loop("app/views/modules/components/site_feed_tile/site_feed_tile.html", [
-            { "size": "2", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet" },
-            { "size": "2", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet" },
-            { "size": "3", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet" },
-            { "size": "3", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet" },
-            { "size": "3", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet" }
+            { "size": "2", "bg" : "https://picsum.photos/600/400", "title" : "lorem ipsum sit amet", "description" : "lorem ipsum dolore sit amet", "tag" : "lorem"  },
+            { "size": "2", "bg" : "https://picsum.photos/601/400", "title" : "lorem ipsum sit amet", "description" : "lorem ipsum dolore sit amet", "tag" : "lorem"  },
+            { "size": "3", "bg" : "https://picsum.photos/600/401", "title" : "lorem ipsum sit amet", "description" : "lorem ipsum dolore sit amet", "tag" : "lorem"  },
+            { "size": "3", "bg" : "https://picsum.photos/599/400", "title" : "lorem ipsum sit amet", "description" : "lorem ipsum dolore sit amet", "tag" : "lorem"  },
+            { "size": "3", "bg" : "https://picsum.photos/600/399", "title" : "lorem ipsum sit amet", "description" : "lorem ipsum dolore sit amet", "tag" : "lorem"  }
             ])
           </div>
 
+          <div class="square_units_container">
+            <h5 class="area_title"><span>Up next</span></h5>
+            @@loop("app/views/modules/components/site_feed_square_unit/site_feed_square_unit.html", [
+              { "img": "https://picsum.photos/300/160", "title": "lorem ipsum dolore sit amet concsecetur", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
+              { "img": "https://picsum.photos/300/161", "title": "lorem ipsum dolore sit amet", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
+              { "img": "https://picsum.photos/301/160", "title": "lorem ipsum dolore consecetur", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
+              { "img": "https://picsum.photos/299/160", "title": "lorem ipsum dolore sit amet lorem", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
+              { "img": "https://picsum.photos/300/159", "title": "lorem ipsum dolore sit amet lorem consecetur", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"}
+            ])
+          </div>
+
+          <div class="full_width_tiles_container">
+            <h5 class="area_title"><span>Recents topics</span></h5>
+          </div>
+          @@loop("app/views/modules/components/site_full_width_tile/site_full_width_tile.html", [
+            { "img": "https://picsum.photos/300/180", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " },
+            { "img": "https://picsum.photos/300/181", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " },
+            { "img": "https://picsum.photos/300/180", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " },
+            { "img": "https://picsum.photos/300/181", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " },
+            { "img": "https://picsum.photos/300/180", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " },
+            { "img": "https://picsum.photos/300/181", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " }
+          ])
+
         </div>
         <div class="iab_sidebar columns">
-
+          <div class="iab_wrapper">
+            @@loop("app/views/modules/components/site_iab_unit/site_iab_unit.html", [
+              { "img": "https://picsum.photos/300/150", "tag": "Ad", "title": "lorem ipsum dolore sit amet", "description": "Consectetur adipisicing elit, sed do eiusmod tempor" },
+              { "img": "https://picsum.photos/300/151", "tag": "Ad", "title": "lorem ipsum dolore sit amet", "description": "Consectetur adipisicing elit, sed do eiusmod tempor" }
+            ])
+          </div>
+          <h5 class="area_title"><span>Most read</span></h5>
+          <div class="most_read_container">
+            @@loop("app/views/modules/components/site_most_read_unit/site_most_read_unit.html", [
+              { "title": "lorem ipsum dolore sit amet consectetur adipisicing elit, sed do eiusmod tempo" },
+              { "title": "lorem ipsum dolore sit amet consectetur adipisicing elit, sed do eiusmod tempo" },
+              { "title": "lorem ipsum dolore sit amet consectetur adipisicing elit, sed do eiusmod tempo" },
+              { "title": "lorem ipsum dolore sit amet consectetur adipisicing elit, sed do eiusmod tempo" },
+              { "title": "lorem ipsum dolore sit amet consectetur adipisicing elit, sed do eiusmod tempo" }
+            ])
+          </div>
+          <div class="iab_wrapper">
+            @@loop("app/views/modules/components/site_iab_unit/site_iab_unit.html", [
+              { "img": "https://picsum.photos/300/150", "tag": "Ad", "title": "lorem ipsum dolore sit amet", "description": "Consectetur adipisicing elit, sed do eiusmod tempor" },
+              { "img": "https://picsum.photos/300/151", "tag": "Ad", "title": "lorem ipsum dolore sit amet", "description": "Consectetur adipisicing elit, sed do eiusmod tempor" },
+              { "img": "https://picsum.photos/300/149", "tag": "Ad", "title": "lorem ipsum dolore sit amet", "description": "Consectetur adipisicing elit, sed do eiusmod tempor" },
+              { "img": "https://picsum.photos/299/151", "tag": "Ad", "title": "lorem ipsum dolore sit amet", "description": "Consectetur adipisicing elit, sed do eiusmod tempor" }
+            ])
+          </div>
         </div>
+
       </div>
 
-
+      <div id="footer" class="row">
+        @@include("app/views/modules/components/site_footer/site_footer.html")
+      </div>
     </div>
 
 

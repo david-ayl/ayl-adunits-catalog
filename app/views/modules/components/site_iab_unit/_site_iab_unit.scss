@@ -1,0 +1,28 @@
+
+.iab_container{
+  width: 300px;
+  height: 250px;
+  margin: 0 0 20px 0;
+  position: relative;
+  border: 1px solid $grey1;
+  box-sizing: border-box;
+}
+.iab_image{
+  display: block;
+  width: 300px;
+  height: 150px;
+}
+.iab_text_wrapper{
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+.iab_tag{
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 11px;
+  background-color: #ffffff;
+  color: $grey3;
+  padding: 2px 3px;
+  border-radius: 2px;
+}
