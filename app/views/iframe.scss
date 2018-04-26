@@ -10,9 +10,14 @@
 @import 'modules/components/site_full_width_tile/_site_full_width_tile.scss';
 @import 'modules/components/site_header/_site_header.scss';
 @import 'modules/components/site_footer/_site_footer.scss';
+@import 'modules/components/site_article/_site_article.scss';
+@import 'modules/components/_soften_effect.scss';
+
 
 
 #webpage_wrapper{
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
@@ -60,4 +65,18 @@
 .iab_sidebar{
   padding: 0 0 0 20px;
   box-sizing: border-box;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+  .main_content{
+    width: 100%;
+    clear: both;
+  }
+  .iab_sidebar{
+    width: 100%;
+    clear: both;
+    padding: 0px;
+  }
 }

@@ -2,6 +2,7 @@
 @import 'global_styles/_settings';
 @import 'global_styles/_mixins';
 @import 'global_styles/_reset';
+@import 'modules/components/app_checkbox_button/_app_checkbox_button';
 
 
 body{
@@ -13,12 +14,15 @@ body{
   resize: both;
   overflow: hidden;
   max-width: 80%;
+  min-width: 360px;
   width: 1400px;
   height: 1024px;
   max-height: 80vh;
+  min-height: 480px;
   margin: 20px auto;
   border: 1px solid $grey1;
-  padding: 10px;
+  padding: 0px 10px 10px 0;
+  background-color: #1a9dd4;
 }
 #iframe{
   display: block;

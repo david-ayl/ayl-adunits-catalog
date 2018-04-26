@@ -26,3 +26,22 @@
   padding: 2px 3px;
   border-radius: 2px;
 }
+
+@media only screen and (max-width: 900px) {
+  .iab_container{
+    &:nth-child(odd){
+      float: left;
+    }
+    &:nth-child(even){
+      float: right;
+    }
+  }
+}
+@media only screen and (max-width: 639px) {
+  .iab_container{
+    float: none!important;
+    clear: both;
+    margin: 0 auto 20px auto;
+
+  }
+}

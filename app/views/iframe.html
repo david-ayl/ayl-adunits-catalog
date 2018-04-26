@@ -40,18 +40,32 @@
             ])
           </div>
 
+          <div class="article_container">
+            @@include("app/views/modules/components/site_article/site_article.html")
+          </div>
+
           <div class="full_width_tiles_container">
             <h5 class="area_title"><span>Recents topics</span></h5>
-          </div>
           @@loop("app/views/modules/components/site_full_width_tile/site_full_width_tile.html", [
-            { "img": "https://picsum.photos/300/180", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " },
-            { "img": "https://picsum.photos/300/181", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " },
-            { "img": "https://picsum.photos/300/180", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " },
-            { "img": "https://picsum.photos/300/181", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " },
-            { "img": "https://picsum.photos/300/180", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " },
-            { "img": "https://picsum.photos/300/181", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur " }
+            { "img": "https://picsum.photos/300/180", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum" },
+            { "img": "https://picsum.photos/300/181", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum" },
+            { "img": "https://picsum.photos/300/180", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum" },
+            { "img": "https://picsum.photos/300/181", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum" },
+            { "img": "https://picsum.photos/300/180", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum" },
+            { "img": "https://picsum.photos/300/181", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum" }
           ])
+          </div>
 
+          <div class="square_units_container">
+            <h5 class="area_title"><span>Related content</span></h5>
+            @@loop("app/views/modules/components/site_feed_square_unit/site_feed_square_unit.html", [
+              { "img": "https://picsum.photos/300/160", "title": "lorem ipsum dolore sit amet concsecetur", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
+              { "img": "https://picsum.photos/300/161", "title": "lorem ipsum dolore sit amet", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
+              { "img": "https://picsum.photos/301/160", "title": "lorem ipsum dolore consecetur", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
+              { "img": "https://picsum.photos/299/160", "title": "lorem ipsum dolore sit amet lorem", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
+              { "img": "https://picsum.photos/300/159", "title": "lorem ipsum dolore sit amet lorem consecetur", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"}
+            ])
+          </div>
         </div>
         <div class="iab_sidebar columns">
           <div class="iab_wrapper">

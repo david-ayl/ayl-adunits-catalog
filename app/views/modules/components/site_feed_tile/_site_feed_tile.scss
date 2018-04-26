@@ -50,3 +50,10 @@
   border-radius: 2px;
   margin: 0 0 5px 0;
 }
+
+@media only screen and (max-width: 900px) {
+  .tile_container{
+    clear: both;
+    width: 100%!important;
+  }
+}

@@ -11,7 +11,14 @@
   </head>
   <body>
 
-
+    <div class="config_wrapper">
+      @@include("app/views/modules/components/app_slider_input/app_slider_input.html")
+      @@loop("app/views/modules/components/app_checkbox_button/app_checkbox_button.html", [
+        { "label" : "infeed" },
+        { "label" : "inad" },
+        { "label" : "intext" }
+      ])
+    </div>
 
     <div id="iframe_wrapper">
       <iframe id="iframe" src="./iframe.html"></iframe>
