@@ -7,7 +7,15 @@ $orange: #ee7444;
 $green : #51baa2;
 
 
-
+.blue{
+	color: $blue;
+}
+.orange{
+	color: $orange;
+}
+.green{
+	color: $green;
+}
 .center_txt{
 	text-align: center;
 }
@@ -20,8 +28,11 @@ $green : #51baa2;
 }
 .flex_container{
 	display: flex;
-	&.flex_just_centered {
+	&.center {
 		justify-content: center;
+	}
+	&.align{
+		align-items: center;
 	}
 }
 .main_content{

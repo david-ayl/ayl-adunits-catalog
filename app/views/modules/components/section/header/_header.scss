@@ -1,0 +1,21 @@
+
+.section_header{
+  margin: 40px 0 30px 0;
+}
+.section_title{
+  text-align: center;
+  font-size: 48px;
+  padding: 10px 0;
+  &.main{
+    color: $grey3;
+  }
+  &.if{
+    color: $blue;
+  }
+  &.ia{
+    color: $orange;
+  }
+  &.it{
+    color: $green;
+  }
+}

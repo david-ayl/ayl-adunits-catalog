@@ -1,6 +1,12 @@
 
 $(document).ready(function() {
 
+  $(function() {
+    $.scrollify({
+      section : ".section",
+    });
+  });
+
   var _$ = function(elem) {
     return $("#iframe").contents().find(elem);
   }
@@ -18,6 +24,10 @@ $(document).ready(function() {
     else {
       _$("[data-adunit='" + context + "']").removeClass("highlighted")
     }
+  })
+
+  $(document).on("click", "[data-adunit]", function() {
+    inject($(this));
   })
 
 });

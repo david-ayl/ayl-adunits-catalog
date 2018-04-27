@@ -11,18 +11,82 @@
   </head>
   <body>
 
-    <div class="config_wrapper">
-      @@include("app/views/modules/components/app_slider_input/app_slider_input.html")
-      @@loop("app/views/modules/components/app_checkbox_button/app_checkbox_button.html", [
-        { "label" : "infeed" },
-        { "label" : "inad" },
-        { "label" : "intext" }
-      ])
+
+    <div class="section">
+      @@include("app/views/modules/components/section/header/header.html",
+        {
+          "adunit": "main",
+          "title": "Adyoulike adunits"
+        }
+      )
+
+      <div class="columns">
+        <div class="description_wrapper">
+          <p class="description">Adyoulike offers 3 types of adunits : <span class="blue">InFeed</span>, <span class="orange">InAd</span> and <span class="green">InText</span>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+
     </div>
 
-    <div id="iframe_wrapper">
-      <iframe id="iframe" src="./iframe.html"></iframe>
+    <div class="section">
+      @@include("app/views/modules/components/section/header/header.html",
+        {
+          "adunit": "if",
+          "title": "InFeed"
+        }
+      )
+
+      <div class="columns flex_container align">
+        <div class="description_wrapper left adunit_detail">
+          <p class="description">Adyoulike offers 3 types of adunits. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <ul class="description_list">
+            <li class="description_point">item 1 here</li>
+            <li class="description_point">Some sizes 300x240 pixels</li>
+            <li class="description_point">Another line goes here</li>
+          </ul>
+        </div>
+        <div class="left adunit_detail">
+          <img class="adunit_image" alt="adunit" src="https://picsum.photos/600/400">
+        </div>
+      </div>
+
     </div>
+
+    <div class="section">
+      @@include("app/views/modules/components/section/header/header.html",
+        {
+          "adunit": "ia",
+          "title": "InAd"
+        }
+      )
+
+    </div>
+
+    <div class="section">
+      @@include("app/views/modules/components/section/header/header.html",
+        {
+          "adunit": "it",
+          "title": "InText"
+        }
+      )
+
+    </div>
+
+    <div class="section">
+      <div class="config_wrapper">
+        @@include("app/views/modules/components/app_slider_input/app_slider_input.html")
+        @@loop("app/views/modules/components/app_checkbox_button/app_checkbox_button.html", [
+          { "label" : "infeed" },
+          { "label" : "inad" },
+          { "label" : "intext" }
+        ])
+      </div>
+
+      <div id="iframe_wrapper">
+        <iframe id="iframe" src="./iframe.html"></iframe>
+      </div>
+    </div>
+
     <script src="scripts/app.js"></script>
 
   </body>

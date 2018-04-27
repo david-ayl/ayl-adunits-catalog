@@ -3,14 +3,14 @@
 @import 'global_styles/_mixins';
 @import 'global_styles/_reset';
 @import 'global_styles/_layout';
-@import 'modules/components/site_feed_tile/_site_feed_tile';
-@import 'modules/components/site_iab_unit/_site_iab_unit';
-@import 'modules/components/site_feed_square_unit/_site_feed_square_unit';
-@import 'modules/components/site_most_read_unit/_site_most_read_unit';
-@import 'modules/components/site_full_width_tile/_site_full_width_tile.scss';
-@import 'modules/components/site_header/_site_header.scss';
-@import 'modules/components/site_footer/_site_footer.scss';
-@import 'modules/components/site_article/_site_article.scss';
+@import 'modules/components/website_example/site_feed_tile/_site_feed_tile';
+@import 'modules/components/website_example/site_iab_unit/_site_iab_unit';
+@import 'modules/components/website_example/site_feed_square_unit/_site_feed_square_unit';
+@import 'modules/components/website_example/site_most_read_unit/_site_most_read_unit';
+@import 'modules/components/website_example/site_full_width_tile/_site_full_width_tile.scss';
+@import 'modules/components/website_example/site_header/_site_header.scss';
+@import 'modules/components/website_example/site_footer/_site_footer.scss';
+@import 'modules/components/website_example/site_article/_site_article.scss';
 @import 'modules/components/_soften_effect.scss';
 
 
