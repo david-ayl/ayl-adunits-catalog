@@ -5,6 +5,7 @@
 
 @import 'modules/components/section/header/header';
 @import 'modules/components/section/description/description';
+@import 'modules/components/section/section/section';
 
 @import 'modules/components/app_checkbox_button/_app_checkbox_button';
 
@@ -13,22 +14,6 @@ body{
   font-family: "Muli";
   font-weight: 300;
   color: #010101;
-}
-.section{
-  padding: 20px;
-  box-sizing: border-box;
-  max-width: 960px;
-  width: 80%;
-  margin: 0 auto;
-}
-.adunit_detail{
-  width: 50%;
-  padding: 20px;
-  box-sizing: border-box;
-}
-.adunit_image{
-  vertical-align: middle;
-  width: 100%;
 }
 #iframe_wrapper{
   resize: both;

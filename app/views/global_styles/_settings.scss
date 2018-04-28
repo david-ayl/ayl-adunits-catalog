@@ -19,6 +19,9 @@ $green : #51baa2;
 .center_txt{
 	text-align: center;
 }
+.bold{
+	font-weight: bold;
+}
 .columns{
 	&:after{
 		content: "";
@@ -45,6 +48,9 @@ $green : #51baa2;
 }
 .left{
 	float: left;
+}
+.right{
+	float: right;
 }
 
 .scrollbar::-webkit-scrollbar-track {
