@@ -12,7 +12,7 @@
   <body>
 
 
-    <div class="section">
+    <div class="section" data-section-name="introduction">
       @@include("app/views/modules/components/section/header/header.html",
         {
           "adunit": "main",
@@ -34,7 +34,7 @@
     </div>
 
     <!-- INFEED -->
-    <div class="section">
+    <div class="section" data-section-name="infeed">
       @@include("app/views/modules/components/section/header/header.html",
         {
           "adunit": "if",
@@ -58,7 +58,7 @@
     </div>
 
     <!-- INAD -->
-    <div class="section">
+    <div class="section" data-section-name="inad">
       @@include("app/views/modules/components/section/header/header.html",
         {
           "adunit": "ia",
@@ -83,7 +83,7 @@
     </div>
 
     <!-- INTEXT -->
-    <div class="section">
+    <div class="section" data-section-name="intext">
       @@include("app/views/modules/components/section/header/header.html",
         {
           "adunit": "it",
@@ -107,7 +107,7 @@
 
     </div>
 
-    <div class="section">
+    <div class="section example_section" data-section-name="example">
       <div class="config_wrapper">
         @@include("app/views/modules/components/app_slider_input/app_slider_input.html")
         @@loop("app/views/modules/components/app_checkbox_button/app_checkbox_button.html", [

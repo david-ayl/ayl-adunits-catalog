@@ -6,6 +6,7 @@
 @import 'modules/components/section/header/header';
 @import 'modules/components/section/description/description';
 @import 'modules/components/section/section/section';
+@import 'modules/components/pagination/_pagination';
 
 @import 'modules/components/app_checkbox_button/_app_checkbox_button';
 
@@ -27,7 +28,7 @@ body{
   margin: 20px auto;
   border: 1px solid $grey1;
   padding: 0px 10px 10px 0;
-  background-color: #1a9dd4;
+  background-color: white;
 }
 #iframe{
   display: block;

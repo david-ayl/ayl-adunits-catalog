@@ -5,6 +5,10 @@
   max-width: 960px;
   width: 80%;
   margin: 0 auto;
+  &.example_section{
+    max-width: none;
+    width: 100%;
+  }
 }
 .adunit_detail{
   width: 50%;
