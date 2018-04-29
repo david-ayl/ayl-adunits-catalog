@@ -46,8 +46,12 @@ $(document).ready(function() {
     }
   })
 
-  $(document).on("click", "[data-adunit]", function() {
+  $(document)
+  .on("click", "[data-adunit]", function() {
     inject($(this));
   })
+  .on("click", "[data-anchor]", function() {
+    $.scrollify.move("#" + $(this).attr("data-anchor"));
+  });
 
 });

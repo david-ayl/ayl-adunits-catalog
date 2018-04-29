@@ -27,54 +27,22 @@
 .highlighted{
   &[data-adunit]{
     cursor: pointer;
-    &:before{
-      display: block;
-      text-align: center;
-      font-family: "Verdana", sans-serif;
-      box-sizing: border-box;
-      color: #FFFFFF;
-      padding: 20px;
-      transition-duration: 0.3s;
-      content: attr(data-info);
-      position: absolute;
-      top:-100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-      z-index: 1;
-    }
     &[data-adunit="infeed"] {
-      &:before{
-        background-color: $blue;
-      }
       &:after{
         box-shadow: inset 0px 0px 49px 0px transparentize($blue, 0.2);
         background-color: transparentize($blue, 0.7);
       }
     }
     &[data-adunit="inad"] {
-      &:before{
-        background-color: $orange;
-      }
       &:after{
         box-shadow: inset 0px 0px 49px 0px transparentize($orange, 0.2);
         background-color: transparentize($orange, 0.7);
       }
     }
     &[data-adunit="intext"] {
-      &:before{
-        line-height: 100%;
-        background-color: $green;
-      }
       &:after{
         box-shadow: inset 0px 0px 49px 0px transparentize($green, 0.2);
         background-color: transparentize($green, 0.7);
-      }
-    }
-    &:hover {
-      &:before {
-        top: 0%;
       }
     }
   }

@@ -16,18 +16,30 @@
       @@include("app/views/modules/components/section/header/header.html",
         {
           "adunit": "main",
-          "title": "Adyoulike adunits"
+          "title": "Adyoulike adunits",
+          "subtitle" : ""
         }
       )
 
       <div class="columns">
         <div class="description_wrapper">
-          <p class="description">
-            An Adyoulike Adunit is a single type of ad that lets you describe the placement type, define it location and leverage inventory quality.<br>
-            Here are 3 types of these adunits : <span class="bold blue">InFeed</span>, <span class="bold orange">InAd</span> and <span class="bold green">InText</span>.
-
-
-          </p>
+          <p class="description">An Adyoulike Adunit is a single type of ad that lets you describe the placement type, define it location and leverage inventory quality.</p>
+          <p class="description"></p>
+          <p class="description">Here are 3 types of these adunits:</p>
+          <div class="min_wrapper columns">
+            <div data-anchor="infeed" class="adunit_min left">
+              <span class="blue">InFeed</span>
+              <img class="adunit_image" alt="infeed" src="images/min_feed.jpg">
+            </div>
+            <div data-anchor="inad" class="adunit_min left">
+              <span class="orange">InAd</span>
+              <img class="adunit_image" alt="infeed" src="images/min_inad.jpg">
+            </div>
+            <div data-anchor="intext" class="adunit_min left">
+              <span class="green">InText</span>
+              <img class="adunit_image" alt="intext" src="images/min_text.jpg">
+            </div>
+          </div>
         </div>
       </div>
 
@@ -38,16 +50,25 @@
       @@include("app/views/modules/components/section/header/header.html",
         {
           "adunit": "if",
-          "title": "InFeed"
+          "title": "InFeed",
+          "subtitle" : "The true premium native placement."
         }
       )
 
       <div class="columns flex_container align">
         <div class="description_wrapper left adunit_detail">
-          <p class="description">True premium native placement, native advertising was originally designed for this type of integration. InFeed adunit is tailored to reproduce the design of the website editorial content tiles.</p>
+          <p class="description">Native advertising was originally designed for this type of integration. InFeed adunit is tailored to reproduce the design of the website editorial content tiles.</p>
+          <p class="description"><span class="blue bold">Usual locations:</span></p>
           <ul class="description_list">
-            <li class="description_point">Premium emphasis from the homepage or site category, really appreciated by advertisers.</li>
-            <li class="description_point">Can be used in addition to the InText format to cover 100% of the site audience.</li>
+            <li class="description_point">Home-pages, categories.</li>
+            <li class="description_point">Editorial zones.</li>
+          </ul>
+          </ul>
+          <p class="description"><span class="blue bold">Keypoints:</span></p>
+          <ul class="description_list">
+            <li class="description_point">Premium emphasis.</li>
+            <li class="description_point">Requires a dedicated tailored template.</li>
+            <li class="description_point">Limited audience - from 10 to 20% of site global.</li>
           </ul>
         </div>
         <div class="left adunit_detail">
@@ -62,16 +83,23 @@
       @@include("app/views/modules/components/section/header/header.html",
         {
           "adunit": "ia",
-          "title": "InAd"
+          "title": "InAd",
+          "subtitle" : "Global inventory coverage."
         }
       )
 
       <div class="columns flex_container align">
         <div class="description_wrapper left adunit_detail">
-          <p class="description"></p>
+          <p class="description">The inad adunits gather IAB compliant sizes.</p>
+          <p class="description"><span class="orange bold">Usual locations:</span></p>
           <ul class="description_list">
-            <li class="description_point">Only accepts placements of size 300x250px or 300x600px - MPU type.</li>
-            <li class="description_point">Globally covers site pages: homepage / category / article and maximizes site audience coverage.</li>
+            <li class="description_point">Run of site.</li>
+            <li class="description_point">Advertising areas like sidebars, billboards, skyscrappers etc.</li>
+          </ul>
+          <p class="description"><span class="orange bold">Keypoints:</span></p>
+          <ul class="description_list">
+            <li class="description_point">Compliants sizes: not below 300x250 pixels</li>
+            <li class="description_point">Globally covers site pages and maximizes site audience coverage.</li>
             <li class="description_point">Mostly used when it comes to header bidding.</li>
           </ul>
         </div>
@@ -87,13 +115,20 @@
       @@include("app/views/modules/components/section/header/header.html",
         {
           "adunit": "it",
-          "title": "InText"
+          "title": "InText",
+          "subtitle" : "Dedicated to articles."
         }
       )
 
       <div class="columns flex_container align">
         <div class="description_wrapper left adunit_detail">
-          <p class="description">Located between two paragraphs of the article.</p>
+          <p class="description">Provides a better site audience coverage. Article pages attract a significant audience, share - generally min 80% of no. unique visitors / impression. A Good integration with a good size.</p>
+          <p class="description"><span class="green bold">Usuals locations:</span></p>
+          <ul class="description_list">
+            <li class="description_point">Articles pages.</li>
+            <li class="description_point">Between two paragraphs.</li>
+          </ul>
+          <p class="description"><span class="green bold">Keypoints:</span></p>
           <ul class="description_list">
             <li class="description_point">Provides a better site audience coverage - article pages attract a significant audience.</li>
             <li class="description_point">A good integration with a good size.</li>
@@ -108,13 +143,23 @@
     </div>
 
     <div class="section example_section" data-section-name="example">
-      <div class="config_wrapper">
-        @@include("app/views/modules/components/app_slider_input/app_slider_input.html")
-        @@loop("app/views/modules/components/app_checkbox_button/app_checkbox_button.html", [
-          { "label" : "infeed" },
-          { "label" : "inad" },
-          { "label" : "intext" }
-        ])
+      <div class="columns config_wrapper">
+        <div class="left settings_text">
+          <p class="description">Try the differents adunit clicking on an eligible area.</p>
+        </div>
+        <div class="left settings_wrapper">
+          @@include("app/views/modules/components/app_slider_input/app_slider_input.html", {
+            "title": "zoom :"
+          })
+          <div class="checkbox_container">
+            <span class="filter_title">Show eligibles areas :</span>
+            @@loop("app/views/modules/components/app_checkbox_button/app_checkbox_button.html", [
+              { "label" : "infeed" },
+              { "label" : "inad" },
+              { "label" : "intext" }
+            ])
+          </div>
+        </div>
       </div>
 
       <div id="iframe_wrapper">

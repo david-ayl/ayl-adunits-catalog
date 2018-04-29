@@ -12,10 +12,29 @@
 }
 .adunit_detail{
   width: 50%;
-  padding: 20px;
   box-sizing: border-box;
 }
 .adunit_image{
   vertical-align: middle;
   width: 100%;
+}
+.min_wrapper{
+  margin: 40px 0 0 0;
+}
+.adunit_min{
+  width: 33%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  &:hover{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  span{
+    font-size: 35px;
+    display: block;
+    text-align: center;
+  }
+  .adunit_image{
+    margin: 20px;
+    width: calc(100% - 40px);
+  }
 }

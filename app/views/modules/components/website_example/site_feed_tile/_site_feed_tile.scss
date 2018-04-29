@@ -22,6 +22,7 @@
   .inner_tile{
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 .tile_text_wrapper{
@@ -34,11 +35,11 @@
   padding: 20px 0 20px 20px;
 }
 .tile_title{
-  font-size: 1.3em;
+  font-size: 21px;
 }
 .tile_description{
-  font-size: 1.2em;
-  line-height: 1.2em;
+  font-size: 15px;
+  line-height: 16px;
 }
 .tile_tag{
   text-transform: uppercase;
