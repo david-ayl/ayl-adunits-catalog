@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "catalog of all ayl adunits",
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "prod": "deploy"
   },
   "dependencies": {
     "jquery": "^3.3.1"

@@ -7,7 +7,7 @@
     filter: grayscale(0.6);
     opacity: 0.5;
   }
-  & .ayl_v_ckr_b{
+  & [id^="ayl_"]{
     filter: grayscale(0);
     opacity: 1;
   }

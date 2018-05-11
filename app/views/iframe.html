@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="styles/iframe.css">
   </head>
   <body class="scrollbar hp_view">
+    <div id="sizer" style="position:fixed;width:100%;height:100%;pointer-events:none;"></div>
 
     <div id="webpage_wrapper">
 
@@ -30,7 +31,7 @@
           </div>
 
           <div class="square_units_container">
-            <h5 class="area_title"><span>Up next</span></h5>
+            <h5 class="area_title soften"><span>Up next</span></h5>
             @@loop("app/views/modules/components/website_example/site_feed_square_unit/site_feed_square_unit.html", [
               { "img": "https://picsum.photos/300/160", "title": "lorem ipsum dolore sit amet concsecetur", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
               { "img": "https://picsum.photos/300/161", "title": "lorem ipsum dolore sit amet", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
@@ -40,12 +41,12 @@
             ])
           </div>
 
-          <div class="article_container">
+          <div class="article_container soften">
             @@include("app/views/modules/components/website_example/site_article/site_article.html")
           </div>
 
           <div class="full_width_tiles_container">
-            <h5 class="area_title"><span>Recents topics</span></h5>
+            <h5 class="area_title soften"><span>Recents topics</span></h5>
           @@loop("app/views/modules/components/website_example/site_full_width_tile/site_full_width_tile.html", [
             { "img": "https://picsum.photos/300/180", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum" },
             { "img": "https://picsum.photos/300/181", "tag": "category", "title": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur lorem ipsum dolore sit amet consecetur ", "description": "lorem ipsum dolore sit amet consecetur lorem ipsum dolore abla sit amet consecetur lorem ipsum" },
@@ -57,7 +58,7 @@
           </div>
 
           <div class="square_units_container">
-            <h5 class="area_title"><span>Related content</span></h5>
+            <h5 class="area_title soften"><span>Related content</span></h5>
             @@loop("app/views/modules/components/website_example/site_feed_square_unit/site_feed_square_unit.html", [
               { "img": "https://picsum.photos/300/160", "title": "lorem ipsum dolore sit amet concsecetur", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
               { "img": "https://picsum.photos/300/161", "title": "lorem ipsum dolore sit amet", "description": "lorem ipsum dolore sit amet zblah", "tag": "dolore"},
@@ -74,7 +75,7 @@
               { "img": "https://picsum.photos/300/151", "tag": "Ad", "title": "lorem ipsum dolore sit amet", "description": "Consectetur adipisicing elit, sed do eiusmod tempor" }
             ])
           </div>
-          <h5 class="area_title"><span>Most read</span></h5>
+          <h5 class="area_title soften"><span>Most read</span></h5>
           <div class="most_read_container">
             @@loop("app/views/modules/components/website_example/site_most_read_unit/site_most_read_unit.html", [
               { "title": "lorem ipsum dolore sit amet consectetur adipisicing elit, sed do eiusmod tempo" },
@@ -103,6 +104,12 @@
 
 
     <script src="scripts/app.js"></script>
+    <!-- INFEED -->
+    <script type="text/javascript" async="true" src="//fo-api.omnitagjs.com/fo-api/ot.js?Placement=1c56a3ce488a80a922c40d17ac3e76bb&Campaign=665253da9edc423f683a5306f22b883d"></script>
+    <!-- INFEED 2 -->
+    <script type="text/javascript" async="true" src="//fo-api.omnitagjs.com/fo-api/ot.js?Placement=5293e90a3f1ef0f3c5fa2e75695c3bb6&Campaign=665253da9edc423f683a5306f22b883d"></script>
+    <!-- IAB -->
+    <script type="text/javascript" async="true" src="//fo-api.omnitagjs.com/fo-api/ot.js?Placement=a3444dcb45a58a06d78b73ac868a7265&Campaign=665253da9edc423f683a5306f22b883d"></script>
 
   </body>
 </html>

@@ -54,4 +54,19 @@ $(document).ready(function() {
     $.scrollify.move("#" + $(this).attr("data-anchor"));
   });
 
+
+  new ResizeSensor($('#iframe_wrapper'), function(){
+    var ifrWidth = _$("#sizer").width(),
+        ifrHeight = _$("#sizer").height();
+    if(ifrWidth > 650) {
+      $("#iframe_wrapper").removeClass("mobile desktop tablet").addClass("desktop");
+    }
+    else if(ifrWidth < 650 && ifrWidth > 550 ) {
+      $("#iframe_wrapper").removeClass("mobile desktop tablet").addClass("tablet");
+    }
+    else{
+      $("#iframe_wrapper").removeClass("mobile desktop tablet").addClass("mobile");
+    }
+  });
+
 });
